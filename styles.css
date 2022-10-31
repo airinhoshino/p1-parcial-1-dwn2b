@@ -1,0 +1,291 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Patrick+Hand&display=swap"); /* Reglas de box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Sacar el margen por defecto */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+@font-face {
+  font-family: "Jost";
+  src: url("assets/fonts/jost-variablefont_wght-webfont.eot");
+  src: url("assets/fonts/jost-variablefont_wght-webfont.eot?#iefix") format("embedded-opentype"), url("assets/fonts/jost-variablefont_wght-webfont.woff2") format("woff2"), url("assets/fonts/jost-variablefont_wght-webfont.woff") format("woff"), url("assets/fonts/jost-variablefont_wght-webfont.ttf") format("truetype"), url("assets/fonts/jost-variablefont_wght-webfont.svg#neue_plakbold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "Jost", Arial, Helvetica, sans-serif;
+  background-color: #1a1c1d;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  color: #ffffff;
+  text-align: center;
+  flex: 1;
+}
+
+h2 {
+  font-size: 4rem;
+  color: #ffffff;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 8;
+}
+main .disk-quantity {
+  margin-top: 1rem;
+  color: #ffffff;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .disk-quantity span {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 0 1rem;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2em;
+  color: #ffffff;
+  flex: 1;
+}
+
+footer ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  list-style: none;
+}
+
+footer ul li {
+  font-size: 1rem;
+  text-align: center;
+}
+
+footer ul li a {
+  font-size: 1em;
+  text-decoration: none;
+  color: #D0E0E3;
+}
+
+footer ul li a:hover {
+  color: #a2c4c9;
+}
+
+.red {
+  color: #cc0505;
+}
+
+.btn {
+  display: inline-block;
+  margin: 1rem 0;
+  border: none;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  padding: 0.5em 3em;
+  border: 5px solid #ffffff !important;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: center;
+  transition: all 0.15s;
+  cursor: pointer;
+}
+.btn--primary {
+  background-color: #008CB8;
+  color: #D9D9D9;
+}
+.btn--primary:hover {
+  color: #008CB8;
+  border: 5px solid #008CB8 !important;
+  background-color: #ffffff;
+}
+.btn--secondary {
+  background-color: #05cc5e;
+  color: #000000;
+}
+.btn--secondary:hover {
+  color: #036830;
+  border: 5px solid #05cc5e !important;
+  background-color: #ffffff;
+}
+
+.disk-container {
+  display: flex;
+  gap: 2rem;
+  margin: 2rem auto;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.disk {
+  display: flex;
+  flex-direction: column;
+  max-width: 220px;
+}
+.disk__cover {
+  background-color: #ffffff;
+  border-radius: 15px;
+}
+.disk__cover-image {
+  width: 220px;
+  height: 220px;
+  background: linear-gradient(180deg, #647480 0%, #5B84A4 100%);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.disk__cover-title {
+  text-align: center;
+  padding: 0.5rem 0.5rem;
+}
+.disk__cover-title h3 {
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: #000000;
+  margin: 0.1rem 0;
+  line-height: 1.45rem;
+}
+.disk__cover-title h4 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #008CB8;
+  margin: 0.1rem 0 0.5rem 0;
+}
+.disk__code {
+  background-color: #FF0B80;
+  font-size: 0.75rem;
+  color: #ffffff;
+  text-align: center;
+  width: fit-content;
+  padding: 0.2rem 0.8rem;
+  border-radius: 25px;
+  margin: 0 auto;
+  margin-top: -1rem;
+}
+.disk__summary {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #ffffff;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+}
+.disk__summary span {
+  font-weight: 700;
+}
+.disk__songs {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+}
+.disk__songs ul li {
+  background-color: #ffffff;
+  list-style: none;
+  border-radius: 7px;
+  padding: 0.5rem 0.8rem;
+  font-size: 0.85rem;
+  line-height: 1rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.3rem;
+}
+.disk__songs ul li .disk__song-item {
+  min-width: 75%;
+  text-align: left;
+}
+.disk__songs ul li .disk__song-duration {
+  min-width: 25%;
+  text-align: right;
+}
+.disk__summary-total {
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  font-weight: 600;
+}
+.disk__summary-total span {
+  font-size: 0.9rem;
+  font-weight: 400;
+  
+}
+.disk__summary-total__item {
+  margin-bottom: 0.5rem;
+}
